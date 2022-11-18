@@ -30,7 +30,7 @@ const App = () => {
       <NavigationContainer>
         <StackNavigator onboarded={onboarded} />
       </NavigationContainer>
-      <StatusBar />
+      <StatusBar style="light" />
     </>
   );
 };

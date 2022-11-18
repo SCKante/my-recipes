@@ -34,6 +34,7 @@ const SignIn = () => {
           placeholder={"Enter your email address"}
           value={email}
           setValue={setEmail}
+          mt={20}
         />
         <Input
           label={"Password"}
@@ -41,6 +42,7 @@ const SignIn = () => {
           secure
           value={password}
           setValue={setPassword}
+          mt={20}
         />
         <TouchableOpacity style={{ alignSelf: "flex-end", paddingVertical: 8 }}>
           <H5>Forgot password?</H5>

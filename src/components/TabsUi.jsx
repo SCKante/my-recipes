@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import React, { useMemo } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { WIDTH } from "../constants/theme";
+import { colorsLight, WIDTH } from "../constants/theme";
 import TabsShape from "./TabsShape";
 import TabHandler from "./TabHandler";
 

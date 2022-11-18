@@ -1,22 +1,34 @@
 import { StyleSheet, Text } from "react-native";
 
-export const H1 = ({ children, style }) => (
-  <Text style={[styles.h1, style]}>{children}</Text>
+export const H1 = ({ children, style, numberOfLines }) => (
+  <Text {...{ numberOfLines }} style={[styles.h1, style]}>
+    {children}
+  </Text>
 );
-export const H2 = ({ children, style }) => (
-  <Text style={[styles.h2, style]}>{children}</Text>
+export const H2 = ({ children, style, numberOfLines }) => (
+  <Text {...{ numberOfLines }} style={[styles.h2, style]}>
+    {children}
+  </Text>
 );
-export const H3 = ({ children, style }) => (
-  <Text style={[styles.h3, style]}>{children}</Text>
+export const H3 = ({ children, style, numberOfLines }) => (
+  <Text {...{ numberOfLines }} style={[styles.h3, style]}>
+    {children}
+  </Text>
 );
-export const H4 = ({ children, style }) => (
-  <Text style={[styles.h4, style]}>{children}</Text>
+export const H4 = ({ children, style, numberOfLines }) => (
+  <Text {...{ numberOfLines }} style={[styles.h4, style]}>
+    {children}
+  </Text>
 );
-export const H5 = ({ children, style }) => (
-  <Text style={[styles.h5, style]}>{children}</Text>
+export const H5 = ({ children, style, numberOfLines }) => (
+  <Text {...{ numberOfLines }} style={[styles.h5, style]}>
+    {children}
+  </Text>
 );
-export const H6 = ({ children, style }) => (
-  <Text style={[styles.h6, style]}>{children}</Text>
+export const H6 = ({ children, style, numberOfLines }) => (
+  <Text {...{ numberOfLines }} style={[styles.h6, style]}>
+    {children}
+  </Text>
 );
 
 const styles = StyleSheet.create({

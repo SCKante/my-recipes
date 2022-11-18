@@ -6,3 +6,4 @@ export { default as Home } from "./stack/tabs/Home";
 export { default as Search } from "./stack/tabs/Search";
 export { default as Favorite } from "./stack/tabs/Favorite";
 export { default as Profile } from "./stack/tabs/Profile";
+export { default as ProductDetails } from "./stack/ProductDetails";

@@ -5,4 +5,7 @@ export { default as Button } from "./Button";
 export { default as SocialIcon } from "./SocialIcon";
 export { default as TabsShape } from "./TabsShape";
 export { default as TabHandler } from "./TabHandler";
+export { default as SearchInput } from "./SearchInput";
+export { default as Categories } from "./Categories";
+export { default as BannerFooter } from "./BannerFooter";
 export { H1, H2, H3, H4, H5, H6 };

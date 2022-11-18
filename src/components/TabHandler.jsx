@@ -2,6 +2,7 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import Octicons from "react-native-vector-icons/Octicons";
 import { colorsLight } from "../constants/theme";
+import { Shadow } from "react-native-shadow-2";
 
 const TabHandler = ({ tabWidth, routes, state, navigation }) => {
   const getIcon = (tab, focused) => {
@@ -53,7 +54,14 @@ const TabHandler = ({ tabWidth, routes, state, navigation }) => {
   };
 
   return (
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
+    <Shadow
+      style={{
+        flexDirection: "row",
+        alignItems: "center",
+      }}
+      startColor={"#eb906620"}
+      paintInside={false}
+    >
       {routes.map((tab, i) => {
         const isFocused = state.index === i;
         const onLongPress = () => {
@@ -88,21 +96,39 @@ const TabHandler = ({ tabWidth, routes, state, navigation }) => {
             >
               <View
                 style={{
-                  position: "absolute",
-                  top: -75 / 4,
                   backgroundColor: colorsLight.primary,
                   width: tabWidth * 0.6,
                   height: tabWidth * 0.6,
                   borderRadius: (tabWidth * 0.6) / 2,
                   justifyContent: "center",
                   alignItems: "center",
+                  position: "absolute",
+                  top: -75 / 4,
                 }}
               >
-                <Image
-                  source={require("../../assets/chef.png")}
-                  resizeMode="contain"
-                  style={{ width: 18, height: 18, tintColor: "white" }}
-                />
+                <Shadow
+                  distance={4}
+                  startColor={"#eb9066d8"}
+                  endColor={"#ff00ff10"}
+                  offset={[0, 2]}
+                >
+                  <View
+                    style={{
+                      backgroundColor: colorsLight.primary,
+                      width: tabWidth * 0.6,
+                      height: tabWidth * 0.6,
+                      borderRadius: (tabWidth * 0.6) / 2,
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Image
+                      source={require("../../assets/chef.png")}
+                      resizeMode="contain"
+                      style={{ width: 18, height: 18, tintColor: "white" }}
+                    />
+                  </View>
+                </Shadow>
               </View>
             </TouchableOpacity>
           );
@@ -111,9 +137,9 @@ const TabHandler = ({ tabWidth, routes, state, navigation }) => {
           <TouchableOpacity
             accessibilityRole="button"
             accessibilityState={isFocused ? { selected: true } : {}}
-            key={i}
             onLongPress={onLongPress}
             onPress={onPress}
+            key={i}
           >
             <View
               style={{
@@ -128,7 +154,7 @@ const TabHandler = ({ tabWidth, routes, state, navigation }) => {
           </TouchableOpacity>
         );
       })}
-    </View>
+    </Shadow>
   );
 };
 

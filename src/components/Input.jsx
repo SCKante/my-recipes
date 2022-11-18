@@ -13,11 +13,20 @@ import { H3, H4, H5 } from "./typography";
 
 const { WIDTH, colorsLight } = Themes;
 
-const Input = ({ label, placeholder, secure, value, setValue, verifyMail }) => {
+const Input = ({
+  label,
+  placeholder,
+  secure,
+  value,
+  setValue,
+  verifyMail,
+  style,
+  mt,
+}) => {
   const [focused, setFocused] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   return (
-    <View style={{ width: WIDTH - 32, marginTop: 20 }}>
+    <View style={{ width: WIDTH - 32, marginTop: mt }}>
       <H4>{label}</H4>
       <TextInput
         style={[
@@ -26,6 +35,7 @@ const Input = ({ label, placeholder, secure, value, setValue, verifyMail }) => {
             borderColor: focused
               ? colorsLight.primary
               : colorsLight.textContrast,
+            ...style,
           },
         ]}
         placeholder={placeholder}

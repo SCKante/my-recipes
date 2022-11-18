@@ -37,6 +37,7 @@ const SignUp = () => {
               placeholder={"Enter your full name"}
               value={email}
               setValue={setEmail}
+              mt={20}
             />
             <Input
               label={"Password"}
@@ -44,6 +45,7 @@ const SignUp = () => {
               secure
               value={password}
               setValue={setPassword}
+              mt={20}
             />
             <Input
               label={"Confirm Password"}
@@ -51,6 +53,7 @@ const SignUp = () => {
               secure
               value={confirmPassword}
               setValue={setConfirmPassword}
+              mt={20}
             />
           </>
         ) : (
@@ -61,12 +64,14 @@ const SignUp = () => {
               value={email}
               setValue={setEmail}
               verifyMail
+              mt={20}
             />
             <Input
               label={"Verrification code"}
               placeholder={"Enter verrification code"}
               value={code}
               setValue={setCode}
+              mt={20}
             />
           </>
         )}
